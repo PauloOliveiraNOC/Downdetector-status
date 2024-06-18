@@ -1,0 +1,537 @@
+zabbix_export:
+  version: '6.4'
+  host_groups:
+    - uuid: 66dace67b2c94a368db106d5ae90d76b
+      name: 'TESTES PROJETO'
+  hosts:
+    - host: DOWNDETECTOR
+      name: DOWNDETECTOR
+      groups:
+        - name: 'TESTES PROJETO'
+      items:
+        - name: ALELO
+          type: EXTERNAL
+          key: 'resultados.txt[1]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/alelo\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'BANCO CENTRAL'
+          type: EXTERNAL
+          key: 'resultados.txt[2]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/bcb\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'BANCO DO BRASIL'
+          type: EXTERNAL
+          key: 'resultados.txt[3]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/banco-do-brasil\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'BANCO PAN'
+          type: EXTERNAL
+          key: 'resultados.txt[4]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/banco-pan\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: BET365
+          type: EXTERNAL
+          key: 'resultados.txt[5]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/bet365\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: BRADESCO
+          type: EXTERNAL
+          key: 'resultados.txt[6]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/bradesco\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: CAIXA
+          type: EXTERNAL
+          key: 'resultados.txt[7]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/caixa\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: COD
+          type: EXTERNAL
+          key: 'resultados.txt[8]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/call-of-duty\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: DATAPREV
+          type: EXTERNAL
+          key: 'resultados.txt[9]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/dataprev\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: DISCORD
+          type: EXTERNAL
+          key: 'resultados.txt[10]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/discord\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'DISNEY PLUS'
+          type: EXTERNAL
+          key: 'resultados.txt[11]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/disney-plus\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: FACEBOOK
+          type: EXTERNAL
+          key: 'resultados.txt[12]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/facebook\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: FORTNITE
+          type: EXTERNAL
+          key: 'resultados.txt[13]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/fortnite\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'FREE FIRE'
+          type: EXTERNAL
+          key: 'resultados.txt[14]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/free-fire\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'GLOBO PLAY'
+          type: EXTERNAL
+          key: 'resultados.txt[15]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/globoplay\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: GMAIL
+          type: EXTERNAL
+          key: 'resultados.txt[16]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/gmail\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: GOOGLE
+          type: EXTERNAL
+          key: 'resultados.txt[17]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/google\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: HBO
+          type: EXTERNAL
+          key: 'resultados.txt[18]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/hbo\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: INSTAGRAN
+          type: EXTERNAL
+          key: 'resultados.txt[19]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/instagram\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: INTER
+          type: EXTERNAL
+          key: 'resultados.txt[20]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/banco-inter\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: ITAU
+          type: EXTERNAL
+          key: 'resultados.txt[21]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/banco-itau\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: LOL
+          type: EXTERNAL
+          key: 'resultados.txt[22]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/league-of-legends\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'LOL WR'
+          type: EXTERNAL
+          key: 'resultados.txt[23]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/league-of-legends-wild-rift\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: NETFLIX
+          type: EXTERNAL
+          key: 'resultados.txt[24]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/netflix\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: NFE
+          type: EXTERNAL
+          key: 'resultados.txt[25]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/nota-fiscal-eletronica\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: NUBANK
+          type: EXTERNAL
+          key: 'resultados.txt[26]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/nubank\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: PICPAY
+          type: EXTERNAL
+          key: 'resultados.txt[27]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/picpay\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'PRIME VIDEO'
+          type: EXTERNAL
+          key: 'resultados.txt[28]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/amazon-prime-instant-video\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'RECEITA FEDERAL'
+          type: EXTERNAL
+          key: 'resultados.txt[29]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/receite-federal\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: SANTANDER
+          type: EXTERNAL
+          key: 'resultados.txt[30]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/santander\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: SICOOB
+          type: EXTERNAL
+          key: 'resultados.txt[31]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/sicoob\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: TIKTOK
+          type: EXTERNAL
+          key: 'resultados.txt[32]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/tiktok\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: 'TWITTER ( X )'
+          type: EXTERNAL
+          key: 'resultados.txt[33]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/twitter\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: WHATSAPP
+          type: EXTERNAL
+          key: 'resultados.txt[34]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/whatsapp\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+        - name: YOUTUBE
+          type: EXTERNAL
+          key: 'resultados.txt[35]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/youtube\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
+      inventory_mode: DISABLED

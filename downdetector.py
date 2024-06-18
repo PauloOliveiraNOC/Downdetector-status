@@ -80,7 +80,8 @@ PARAMS = {
     'Relatórios de usuários indicam problemas': 'danger'
 }
 
-# Definindo a variável `craw`
+
+
 if ssl.OPENSSL_VERSION_INFO[0] < 1 or ssl.OPENSSL_VERSION_INFO[1] < 1 or ssl.OPENSSL_VERSION_INFO[2] < 1:
     craw = "requests"
 else:
