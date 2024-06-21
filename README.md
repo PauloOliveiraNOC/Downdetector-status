@@ -67,4 +67,4 @@ discord
 hbo
 Globo
 
-
+Que tal pagar um café ::  megatecsuporte0@gmail.com
