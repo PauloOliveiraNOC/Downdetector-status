@@ -29,3 +29,42 @@ crontab -e      e cole        0,5,10,15,20,25,30,35,40,45,50,55 * * * * cd  /usr
 Vá até o frontend do zabbix e importe o host, edite a sua preferencia .
 
 
+instagram
+whatsapp
+twitter
+facebook
+tiktok
+banco-itau
+nubank
+caixa
+banco-do-brasil
+bradesco
+sicoob
+banco-pan
+banco-inter
+santander
+picpay
+bcb
+nota-fiscal-eletronica
+sefaz
+youtube
+google
+gmail
+globoplay
+netflix
+amazon-prime-instant-video
+disney-plus
+alelo
+league-of-legends
+league-of-legends-wild-rift
+call-of-duty
+free-fire
+bet365
+dataprev
+receite-federal
+fortnite
+discord
+hbo
+Globo
+
+
