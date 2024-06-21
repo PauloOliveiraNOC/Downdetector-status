@@ -534,4 +534,19 @@ zabbix_export:
                   } else {
                       return "";
                   }
+        - name: GLOBO
+          type: EXTERNAL
+          key: 'resultados.txt[36]'
+          delay: 5m
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - |
+                  var input = value;
+                  var match = input.match(/http:\/\/downdetector\.com\.br\/fora-do-ar\/globo\/Status:(\d+)/);
+                  if (match) {
+                      return match[1];
+                  } else {
+                      return "";
+                  }
       inventory_mode: DISABLED
