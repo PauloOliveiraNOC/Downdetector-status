@@ -1,6 +1,7 @@
 import requests
 import re
 
+#FONTE DE DADOS
 url = "https://gist.github.com/PauloOliveiraNOC/58db8fa472f43397bdbb73421025cf92.js"
 
 
@@ -19,4 +20,4 @@ with open('resultados.txt', 'w') as file:
     for url, status in data_dict.items():
         file.write(f"{url}/Status:{status}\n")
 
-print("Results have been saved to 'resultados.txt'")
+print("resultados salvos 'resultados.txt'")
