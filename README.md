@@ -2,13 +2,9 @@
 
 # Requisitos
 Python 3
-ssl
-re
-random
-bs4
 requests
-time
-cloudscraper
+re
+
 
 # Implementação 
 
