@@ -1,7 +1,7 @@
 ﻿# Downdetector-status
 
 # Requisitos
-Python 3
+Python 3.11
 requests
 re
 
